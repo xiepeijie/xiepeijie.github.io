@@ -4,17 +4,42 @@
   <meta charset="utf-8">
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>Payge&#39;s Blog</title>
+  <title>draw round rect image | Payge&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="人生是一个踩坑和补坑中不断进化的过程">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Payge's Blog">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="图片的圆角显示，从实现方法上讲分为两种做法：  
+在图片上做在控件上做从代码上讲，均使用 Android Graphics API：  
+
+Xfermodes
+Regions
+Canvas.drawRoundRect
+Canvas.clipPath
+GradientDrawable.setCornerRadii圆角和圆形的处理方式可以统一成一种，当圆角大小等于图片宽的一半时候，就变成了圆形。  原">
+<meta property="og:type" content="article">
+<meta property="og:title" content="draw round rect image">
+<meta property="og:url" content="http://yoursite.com/2016/04/18/draw-round-rect/index.html">
 <meta property="og:site_name" content="Payge's Blog">
-<meta property="og:description" content="人生是一个踩坑和补坑中不断进化的过程">
+<meta property="og:description" content="图片的圆角显示，从实现方法上讲分为两种做法：  
+在图片上做在控件上做从代码上讲，均使用 Android Graphics API：  
+
+Xfermodes
+Regions
+Canvas.drawRoundRect
+Canvas.clipPath
+GradientDrawable.setCornerRadii圆角和圆形的处理方式可以统一成一种，当圆角大小等于图片宽的一半时候，就变成了圆形。  原">
+<meta property="og:image" content="http://gavinliu.cn/images/2016.04.12%20-%20Android-%E5%AE%9E%E7%8E%B0%E5%9B%BE%E7%89%87%E5%9C%86%E8%A7%92%E6%98%BE%E7%A4%BA%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E5%BC%8F1.jpg">
+<meta property="og:image" content="http://gavinliu.cn/images/2016.04.12%20-%20Android-%E5%AE%9E%E7%8E%B0%E5%9B%BE%E7%89%87%E5%9C%86%E8%A7%92%E6%98%BE%E7%A4%BA%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E5%BC%8F2.jpg">
+<meta property="og:updated_time" content="2016-04-18T03:47:43.057Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Payge's Blog">
-<meta name="twitter:description" content="人生是一个踩坑和补坑中不断进化的过程">
+<meta name="twitter:title" content="draw round rect image">
+<meta name="twitter:description" content="图片的圆角显示，从实现方法上讲分为两种做法：  
+在图片上做在控件上做从代码上讲，均使用 Android Graphics API：  
+
+Xfermodes
+Regions
+Canvas.drawRoundRect
+Canvas.clipPath
+GradientDrawable.setCornerRadii圆角和圆形的处理方式可以统一成一种，当圆角大小等于图片宽的一半时候，就变成了圆形。  原">
+<meta name="twitter:image" content="http://gavinliu.cn/images/2016.04.12%20-%20Android-%E5%AE%9E%E7%8E%B0%E5%9B%BE%E7%89%87%E5%9C%86%E8%A7%92%E6%98%BE%E7%A4%BA%E7%9A%84%E5%87%A0%E7%A7%8D%E6%96%B9%E5%BC%8F1.jpg">
   
     <link rel="alternative" href="/atom.xml" title="Payge&#39;s Blog" type="application/atom+xml">
   
@@ -122,9 +147,7 @@
 	</div>
 </nav>
 
-      <div class="body-wrap">
-  
-    <article id="post-draw-round-rect" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-draw-round-rect" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
       <a href="/2016/04/18/draw-round-rect/" class="article-date">
@@ -140,12 +163,19 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/04/18/draw-round-rect/">draw round rect image</a>
+    <h1 class="article-title" itemprop="name">
+      draw round rect image
     </h1>
   
 
       </header>
+      
+      <div class="article-info article-info-post">
+        
+        
+
+        <div class="clearfix"></div>
+      </div>
       
     
     <div class="article-entry" itemprop="articleBody">
@@ -188,158 +218,68 @@
       
     </div>
     
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
   </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2016/03/24/Android键盘与面板无缝切换/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Android键盘与面板无缝切换</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
   
 </article>
 
 
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">Share to: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+    <a class="jiathis_button_twitter"></a>
+    <a class="jiathis_button_plus"></a> 
+    <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
 
 
 
 
 
 
-
-  
-    <article id="post-Android键盘与面板无缝切换" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/03/24/Android键盘与面板无缝切换/" class="article-date">
-  	<time datetime="2016-03-24T02:51:02.000Z" itemprop="datePublished">2016-03-24</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/03/24/Android键盘与面板无缝切换/">Android键盘与面板无缝切换</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>原文出自：<a href="http://blog.dreamtobe.cn/2015/09/01/keyboard-panel-switch/">Android键盘面板冲突 布局闪动处理方案</a></p>
-<h1 id="Android键盘面板冲突-布局闪动处理方案"><a href="#Android键盘面板冲突-布局闪动处理方案" class="headerlink" title="Android键盘面板冲突 布局闪动处理方案"></a>Android键盘面板冲突 布局闪动处理方案</h1><p><a href="https://bintray.com/jacksgong/maven/JKeyboardPanelSwitch/_latestVersion"><img src="https://api.bintray.com/packages/jacksgong/maven/JKeyboardPanelSwitch/images/download.svg" alt="Download"></a><br><a href="https://travis-ci.org/Jacksgong/JKeyboardPanelSwitch"><img src="https://travis-ci.org/Jacksgong/JKeyboardPanelSwitch.svg?branch=master" alt="Build Status"></a></p>
-<hr>
-<blockquote>
-<p>起源，之前在微信工作的时候，为了给用户带来更好的基础体验，做了很多尝试，踩了很多输入法的坑，特别是动态调整键盘高度，二级页面是透明背景，魅族早期的smartbar等, 后来逐一完善了，考虑到拥抱开源，看业界还是有很多应用存在类似问题。就有了这个repo</p>
-</blockquote>
-<hr>
-<blockquote>
-<p>之前有写过一篇核心思想: <a href="http://blog.dreamtobe.cn/2015/02/07/Switching-between-the-panel-and-the-keyboard/">Switching between the panel and the keyboard in Wechat</a></p>
-<p>这里主要是根据核心思想的实践，实践原理是通过<code>CustomRootLayout</code>布局变化，来获知是否是键盘引起的真正的布局变化，进而处理到接下来<code>PanelLayout</code>的<code>onMersure</code>中。</p>
-</blockquote>
-<p>我们可以看到微信中的 从键盘与微信的切换是无缝的，而且是无闪动的，这种基础体验是符合预期的。</p>
-<p>但是实际中，简单的 键盘与面板切换 是会有闪动，问题的。今天我们就实践分析与解决这个问题。</p>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a  href="/2016/03/24/Android键盘与面板无缝切换/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="draw-round-rect" data-title="draw round rect image" data-url="http://yoursite.com/2016/04/18/draw-round-rect/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
 
 
 
 
-
-
-
-
-
-  
-    <article id="android-svg那点事" class="article article-type-android" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/03/10/svg那点事/" class="article-date">
-  	<time datetime="2016-03-10T05:52:43.000Z" itemprop="datePublished">2016-03-10</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/03/10/svg那点事/">android svg那点事</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>忘记是哪一天，公司自称导弹（外号）的90后小设计师，带着抱怨的口气跟我说：Android切那么多套，好麻烦啊，能不能只切一套SVG的图片？我当时头脑里立马浮现一个问题SVG是什么。然后我立马打开网络搜索，各种谷歌，通过查看各方资料，终于弄清楚SVG是个什么东东！<br>SVG是Android 5.0推出的新特性之一，当时设计师跟我提出来的时候，使用SVG只能是兼容Android 5.0以上机型。值得庆幸的是今年2月底谷歌官方更新Android support library 23.2，其中有一项重要的更新是：Support Vector Drawables and Animated Vector Drawables。如此也能方便的在Android 5.0以下的机型使用SVG了。</p>
-<h1 id="SVG的使用"><a href="#SVG的使用" class="headerlink" title="SVG的使用"></a>SVG的使用</h1><p>1、将SVG文件转换成VectorDrawable文件<br>(1) 在线将SVG文件转换成VectorDrawable文件<br>转换地址：<a href="http://inloop.github.io/svg2android/" target="_blank" rel="external">自动转换的工具</a>（使用简单，直接拖拽，支持批量转换）<br>通过支持库来使用SVG，详见：<a href="http://chinagdg.org/2016/03/android-support-library-23-2/" target="_blank" rel="external">Android Support Library 23.2</a><br>(2)使用SVG2VectorDrawable插件转换<br>一个Intellij Platform插件，通过其可以完成从*.svg文件到Android VectorDrawable的转换,<br>本插件支持Intellij IDEA和Android Studio，需要JDK版本1.6及以上<br>特性  </p>
-<ul>
-<li>图形化界面</li>
-<li>自动解析当前Project，如果当前Project为Android Project，则会列出所有Module</li>
-<li>支持将SVG解析为多种dpi的VectorDrawable</li>
-<li>支持SVG的transform属性<br>详见：<a href="http://android-arsenal.com/details/1/3137?utm_source=tuicool&amp;utm_medium=referral" target="_blank" rel="external">SVG2VectorDrawable</a><br>2、纯代码转化<br>当然一般需要借助开源项目，让转换工作，方便高效完成，在github上搜Android svg，比较多开源。<br>推荐读者2个：<br><a href="https://github.com/japgolly/svg-android" target="_blank" rel="external">svg-android</a><br><a href="https://github.com/xiepeijie/SVG2Drawable" target="_blank" rel="external">SVG2Drawable</a>  </li>
-</ul>
-<h1 id="结束"><a href="#结束" class="headerlink" title="结束"></a>结束</h1><p>至此我所了解的SVG阐述完毕，希望能帮助到还不太熟悉了解的同学。此为博客开通后的第一篇文章，望各位读者多多支持转发，thanks。</p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-  
 </div>
       <footer id="footer">
   <div class="outer">
@@ -363,8 +303,8 @@
 		fancybox: true,
 		mathjax: true,
 		animate: true,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,

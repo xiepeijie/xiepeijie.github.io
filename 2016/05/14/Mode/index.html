@@ -84,15 +84,16 @@
 
 
 
-<meta name="description">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Payge's Blog">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="Android 4.4 (API Level 19) introduces a new SYSTEM_UI_FLAG_IMMERSIVE flag for setSystemUiVisibility() that lets your app go truly “full screen.” This flag, when combined with the SYSTEM_UI_FLAG_HIDE_N">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Using Immersive Full-Screen Mode">
+<meta property="og:url" content="http://yoursite.com/2016/05/14/Mode/index.html">
 <meta property="og:site_name" content="Payge's Blog">
-<meta property="og:description">
+<meta property="og:description" content="Android 4.4 (API Level 19) introduces a new SYSTEM_UI_FLAG_IMMERSIVE flag for setSystemUiVisibility() that lets your app go truly “full screen.” This flag, when combined with the SYSTEM_UI_FLAG_HIDE_N">
+<meta property="og:updated_time" content="2016-05-14T17:14:43.678Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Payge's Blog">
-<meta name="twitter:description">
+<meta name="twitter:title" content="Using Immersive Full-Screen Mode">
+<meta name="twitter:description" content="Android 4.4 (API Level 19) introduces a new SYSTEM_UI_FLAG_IMMERSIVE flag for setSystemUiVisibility() that lets your app go truly “full screen.” This flag, when combined with the SYSTEM_UI_FLAG_HIDE_N">
 
 
 
@@ -110,7 +111,7 @@
   };
 </script>
 
-  <title> Payge's Blog </title>
+  <title> Using Immersive Full-Screen Mode | Payge's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="">
@@ -131,9 +132,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left 
-   page-home 
- ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -200,9 +199,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
   
@@ -222,10 +221,7 @@
             
             
               
-                
-                <a class="post-title-link" href="/2016/05/14/Mode/" itemprop="url">
-                  Using Immersive Full-Screen Mode
-                </a>
+                Using Immersive Full-Screen Mode
               
             
           </h1>
@@ -265,9 +261,7 @@
       
 
       
-        
-          
-            <p>Android 4.4 (API Level 19) introduces a new SYSTEM_UI_FLAG_IMMERSIVE flag for <code>setSystemUiVisibility()</code> that lets your app go truly “full screen.” This flag, when combined with the SYSTEM_UI_FLAG_HIDE_NAVIGATION and SYSTEM_UI_FLAG_FULLSCREEN flags, hides the navigation and status bars and lets your app capture all touch events on the screen.</p>
+        <p>Android 4.4 (API Level 19) introduces a new SYSTEM_UI_FLAG_IMMERSIVE flag for <code>setSystemUiVisibility()</code> that lets your app go truly “full screen.” This flag, when combined with the SYSTEM_UI_FLAG_HIDE_NAVIGATION and SYSTEM_UI_FLAG_FULLSCREEN flags, hides the navigation and status bars and lets your app capture all touch events on the screen.</p>
 <p>When immersive full-screen mode is enabled, your activity continues to receive all touch events. The user can reveal the system bars with an inward swipe along the region where the system bars normally appear. This clears the SYSTEM_UI_FLAG_HIDE_NAVIGATION flag (and the SYSTEM_UI_FLAG_FULLSCREEN flag, if applied) so the system bars become visible. This also triggers your <code>View.OnSystemUiVisibilityChangeListener</code>, if set. However, if you’d like the system bars to automatically hide again after a few moments, you can instead use the SYSTEM_UI_FLAG_IMMERSIVE_STICKY flag. Note that the “sticky” version of the flag doesn’t trigger any listeners, as system bars temporarily shown in this mode are in a transient state.</p>
 <p>Figure 1 illustrates the different “immersive mode” states:</p>
 <p>system bars<br>Figure 1. Immersive mode states.</p>
@@ -292,16 +286,19 @@
 <p>Below is a simple approach to using this flag. Any time the window receives focus, simply set the IMMERSIVE_STICKY flag, along with the other flags discussed in Use IMMERSIVE. For example:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">@Override</span><br><span class="line">public void onWindowFocusChanged(boolean hasFocus) &#123;</span><br><span class="line">        super.onWindowFocusChanged(hasFocus);</span><br><span class="line">    if (hasFocus) &#123;</span><br><span class="line">        decorView.setSystemUiVisibility(</span><br><span class="line">                View.SYSTEM_UI_FLAG_LAYOUT_STABLE</span><br><span class="line">                | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION</span><br><span class="line">                | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN</span><br><span class="line">                | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION</span><br><span class="line">                | View.SYSTEM_UI_FLAG_FULLSCREEN</span><br><span class="line">                | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY);&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p>Note: If you like the auto-hiding behavior of IMMERSIVE_STICKY but need to show your own UI controls as well, just use IMMERSIVE combined with <code>Handler.postDelayed()</code> or something similar to re-enter immersive mode after a few seconds.</p>
 
-          
+      
+    </div>
+
+    <div>
+      
         
       
     </div>
 
     <div>
       
-    </div>
+        
 
-    <div>
       
     </div>
 
@@ -312,16 +309,15 @@
 
       
       
-        <div class="post-eof"></div>
-      
     </footer>
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -329,6 +325,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -348,8 +348,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.jpg"
@@ -405,6 +414,17 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Choose-an-Approach"><span class="nav-number">1.</span> <span class="nav-text">Choose an Approach</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Use-Sticky-Immersion"><span class="nav-number">2.</span> <span class="nav-text">Use Sticky Immersion</span></a></li></ol></div>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -508,6 +528,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
 
   
 

@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="serialization msgpack proto," />
 
 
 
@@ -84,15 +84,21 @@
 
 
 
-<meta name="description">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Payge's Blog">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="1 messagepackMessagePack is an efficient binary serialization format. It lets you exchange data among multiple languages like JSON. But it’s faster and smaller. Small integers are encoded into a singl">
+<meta property="og:type" content="article">
+<meta property="og:title" content="MessagePack and Protocol buffers">
+<meta property="og:url" content="http://yoursite.com/2016/07/24/MessagePack and Protocol Buffers/index.html">
 <meta property="og:site_name" content="Payge's Blog">
-<meta property="og:description">
+<meta property="og:description" content="1 messagepackMessagePack is an efficient binary serialization format. It lets you exchange data among multiple languages like JSON. But it’s faster and smaller. Small integers are encoded into a singl">
+<meta property="og:image" content="http://static.open-open.com/lib/uploadImg/20141008/20141008091955_809.png">
+<meta property="og:image" content="http://static.open-open.com/lib/uploadImg/20141008/20141008091956_425.png">
+<meta property="og:image" content="http://note.youdao.com/yws/res/1148/WEBRESOURCE3f29b4e06a9ca8c01477536fd460b4fe">
+<meta property="og:image" content="http://note.youdao.com/yws/res/1099/WEBRESOURCE49933356fbf4c30a2e2bc1529ae39761">
+<meta property="og:updated_time" content="2016-07-24T07:11:48.295Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Payge's Blog">
-<meta name="twitter:description">
+<meta name="twitter:title" content="MessagePack and Protocol buffers">
+<meta name="twitter:description" content="1 messagepackMessagePack is an efficient binary serialization format. It lets you exchange data among multiple languages like JSON. But it’s faster and smaller. Small integers are encoded into a singl">
+<meta name="twitter:image" content="http://static.open-open.com/lib/uploadImg/20141008/20141008091955_809.png">
 
 
 
@@ -110,7 +116,7 @@
   };
 </script>
 
-  <title> Payge's Blog </title>
+  <title> MessagePack and Protocol buffers | Payge's Blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -131,9 +137,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left 
-   page-home 
- ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -200,9 +204,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
   
@@ -222,10 +226,7 @@
             
             
               
-                
-                <a class="post-title-link" href="/2016/07/24/MessagePack and Protocol Buffers/" itemprop="url">
-                  MessagePack and Protocol buffers
-                </a>
+                MessagePack and Protocol buffers
               
             
           </h1>
@@ -265,9 +266,7 @@
       
 
       
-        
-          
-            <h2 id="1-messagepack"><a href="#1-messagepack" class="headerlink" title="1 messagepack"></a>1 messagepack</h2><p>MessagePack is an efficient binary serialization format. It lets you exchange data among multiple languages like JSON. But it’s faster and smaller. Small integers are encoded into a single byte, and typical short strings require only one extra byte in addition to the strings themselves.</p>
+        <h2 id="1-messagepack"><a href="#1-messagepack" class="headerlink" title="1 messagepack"></a>1 messagepack</h2><p>MessagePack is an efficient binary serialization format. It lets you exchange data among multiple languages like JSON. But it’s faster and smaller. Small integers are encoded into a single byte, and typical short strings require only one extra byte in addition to the strings themselves.</p>
 <h3 id="1-1-messagepack数据类型"><a href="#1-1-messagepack数据类型" class="headerlink" title="1.1 messagepack数据类型"></a>1.1 messagepack数据类型</h3><ul>
 <li>Integer represents an integer  </li>
 <li>Nil represents nil  </li>
@@ -335,153 +334,58 @@
 </table>
 <h2 id="4-总结"><a href="#4-总结" class="headerlink" title="4. 总结"></a>4. 总结</h2><p>从测试对比数据中可以看出，json字节数最大，但是序列化、反序列化性能最高；protocol buffers字节数最小，序列化、反序列化性能居中；messagepack字节数居中，但是序列化、反序列化性能最差。</p>
 
-          
+      
+    </div>
+
+    <div>
+      
         
       
     </div>
 
     <div>
       
-    </div>
+        
 
-    <div>
       
     </div>
 
     <footer class="post-footer">
       
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/05/14/Mode/" itemprop="url">
-                  Using Immersive Full-Screen Mode
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-05-14T23:27:14+08:00" content="2016-05-14">
-              2016-05-14
-            </time>
-          </span>
-
+        <div class="post-tags">
           
-
-          
-            
-          
-
-          
-
-          
-          
-
+            <a href="/tags/serialization-msgpack-proto/" rel="tag">#serialization msgpack proto</a>
           
         </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-            <p>Android 4.4 (API Level 19) introduces a new SYSTEM_UI_FLAG_IMMERSIVE flag for <code>setSystemUiVisibility()</code> that lets your app go truly “full screen.” This flag, when combined with the SYSTEM_UI_FLAG_HIDE_NAVIGATION and SYSTEM_UI_FLAG_FULLSCREEN flags, hides the navigation and status bars and lets your app capture all touch events on the screen.</p>
-<p>When immersive full-screen mode is enabled, your activity continues to receive all touch events. The user can reveal the system bars with an inward swipe along the region where the system bars normally appear. This clears the SYSTEM_UI_FLAG_HIDE_NAVIGATION flag (and the SYSTEM_UI_FLAG_FULLSCREEN flag, if applied) so the system bars become visible. This also triggers your <code>View.OnSystemUiVisibilityChangeListener</code>, if set. However, if you’d like the system bars to automatically hide again after a few moments, you can instead use the SYSTEM_UI_FLAG_IMMERSIVE_STICKY flag. Note that the “sticky” version of the flag doesn’t trigger any listeners, as system bars temporarily shown in this mode are in a transient state.</p>
-<p>Figure 1 illustrates the different “immersive mode” states:</p>
-<p>system bars<br>Figure 1. Immersive mode states.</p>
-<p>In figure 1:</p>
-<ol>
-<li><p><strong>Non-immersive mode</strong>—This is how the app appears before it enters immersive mode. It is also how the app appears if you use the IMMERSIVE flag, and the user swipes to display the system bars, thereby clearing the SYSTEM_UI_FLAG_HIDE_NAVIGATION and SYSTEM_UI_FLAG_FULLSCREEN flags. Once these flags are cleared, the system bars reappear and remain visible.<br>Note that it’s best practice to keep all UI controls in sync with the system bars, to minimize the number of states your screen can be in. This provides a more seamless user experience. So here all UI controls are displayed along with the status bars. Once the app enters immersive mode, the UI controls are hidden along with the system bars. To ensure that your UI visibility stays in sync with system bar visibility, make sure to provide an appropriate <code>View.OnSystemUiVisibilityChangeListener</code> to watch for changes, as described in Responding to UI Visibility Changes.</p>
-</li>
-<li><p><strong>Reminder bubble</strong>—The system displays a reminder bubble the first time users enter immersive mode in your app. The reminder bubble reminds users how to display the system bars.<br>Note: If you want to force the reminder bubble to appear for testing purposes, you can do so by putting the app in immersive mode, turning off the screen with the power button, and then turning the screen back on again within 5 seconds.</p>
-</li>
-<li><p><strong>Immersive mode</strong>—This is the app in immersive mode, with the system bars and other UI controls hidden. You can achieve this state with either IMMERSIVE or IMMERSIVE_STICKY.<br>Sticky flag—This is the UI you see if you use the IMMERSIVE_STICKY flag, and the user swipes to display the system bars. Semi-transparent bars temporarily appear and then hide again. The act of swiping doesn’t clear any flags, nor does it trigger your system UI visibility change listeners, because the transient appearance of the system bars isn’t considered a UI visibility change.  </p>
-</li>
-</ol>
-<p><strong>Note</strong>: Remember that the “immersive” flags only take effect if you use them in conjunction with<br>SYSTEM_UI_FLAG_HIDE_NAVIGATION, SYSTEM_UI_FLAG_FULLSCREEN, or both. You can just use one or the<br>other, but it’s common to hide both the status and the navigation bar when you’re implementing<br>“full immersion” mode.</p>
-<h2 id="Choose-an-Approach"><a href="#Choose-an-Approach" class="headerlink" title="Choose an Approach"></a>Choose an Approach</h2><p>The flags SYSTEM_UI_FLAG_IMMERSIVE and SYSTEM_UI_FLAG_IMMERSIVE_STICKY both provide an immersive experience, but with the differences in behavior described above. Here are examples of when you would use one flag vs. the other:</p>
-<p>If you’re building a book reader, news reader, or a magazine, use the IMMERSIVE flag in conjunction with SYSTEM_UI_FLAG_FULLSCREEN and SYSTEM_UI_FLAG_HIDE_NAVIGATION. Because users may want to access the action bar and other UI controls somewhat frequently, but not be bothered with any UI elements while flipping through content, IMMERSIVE is a good option for this use case.<br>If you’re building a truly immersive app, where you expect users to interact near the edges of the screen and you don’t expect them to need frequent access to the system UI, use the IMMERSIVE_STICKY flag in conjunction with SYSTEM_UI_FLAG_FULLSCREEN and SYSTEM_UI_FLAG_HIDE_NAVIGATION. For example, this approach might be suitable for a game or a drawing app.<br>If you’re building a video player or some other app that requires minimal user interaction, you can probably get by with the lean back approach, available since Android 4.0 (API Level 14). For this type of app, simply using SYSTEM_UI_FLAG_FULLSCREEN and SYSTEM_UI_FLAG_HIDE_NAVIGATION should be sufficient. Don’t use the “immersive” flags in this case.<br>Use Non-Sticky Immersion<br>When you use the SYSTEM_UI_FLAG_IMMERSIVE flag, it hides the system bars based on what other UI flags you have set (SYSTEM_UI_FLAG_HIDE_NAVIGATION, SYSTEM_UI_FLAG_FULLSCREEN, or both). When the user swipes inward in a system bars region, the system bars reappear and remain visible.</p>
-<p>It’s good practice to include other system UI flags (such as SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION and SYSTEM_UI_FLAG_LAYOUT_STABLE) to keep the content from resizing when the system bars hide and show. You should also make sure that the action bar and other UI controls are hidden at the same time. This snippet demonstrates how to hide and show the status and navigation bars, without resizing the content:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">// This snippet hides the system bars.</span><br><span class="line">private void hideSystemUI() &#123;</span><br><span class="line">    // Set the IMMERSIVE flag.</span><br><span class="line">    // Set the content to appear under the system bars so that the content</span><br><span class="line">    // doesn&apos;t resize when the system bars hide and show.</span><br><span class="line">    mDecorView.setSystemUiVisibility(</span><br><span class="line">            View.SYSTEM_UI_FLAG_LAYOUT_STABLE</span><br><span class="line">            | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION</span><br><span class="line">            | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN</span><br><span class="line">            | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION // hide nav bar</span><br><span class="line">            | View.SYSTEM_UI_FLAG_FULLSCREEN // hide status bar</span><br><span class="line">            | View.SYSTEM_UI_FLAG_IMMERSIVE);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// This snippet shows the system bars. It does this by removing all the flags</span><br><span class="line">// except for the ones that make the content appear under the system bars.</span><br><span class="line">private void showSystemUI() &#123;</span><br><span class="line">    mDecorView.setSystemUiVisibility(</span><br><span class="line">            View.SYSTEM_UI_FLAG_LAYOUT_STABLE</span><br><span class="line">            | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION</span><br><span class="line">            | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>You may also want to implement the following in conjunction with the IMMERSIVE flag to provide a better user experience:</p>
-<p>Register a listener so that your app can get notified of system UI visibility changes, as described in Responding to UI Visibility Changes.<br>Implement <code>onWindowFocusChanged()</code>. If you gain window focus, you may want to re-hide the system bars. If you lose window focus, for example due to a dialog or pop up menu showing above your app, you’ll probably want to cancel any pending “hide” operations you previously scheduled with <code>Handler.postDelayed()</code> or something similar.<br>Implement a <code>GestureDetector</code> that detects <code>onSingleTapUp(MotionEvent)</code>, to allow users to manually toggle the visibility of the system bars by touching your content. Simple click listeners aren’t the best solution for this because they get triggered even if the user drags a finger across the screen (assuming the click target takes up the whole screen).<br>For more discussion of these topics, watch the video <code>DevBytes</code>: Android 4.4 Immersive Mode.</p>
-<h2 id="Use-Sticky-Immersion"><a href="#Use-Sticky-Immersion" class="headerlink" title="Use Sticky Immersion"></a>Use Sticky Immersion</h2><p>When you use the SYSTEM_UI_FLAG_IMMERSIVE_STICKY flag, an inward swipe in the system bars areas causes the bars to temporarily appear in a semi-transparent state, but no flags are cleared, and your system UI visibility change listeners are not triggered. The bars automatically hide again after a short delay, or if the user interacts with the middle of the screen.</p>
-<p>Figure 2 shows the semi-transparent system bars that briefly appear and then hide again when you use the IMMERSIVE_STICKY flag.</p>
-<p>system bars<br>Figure 2. Auto-hiding system bars.</p>
-<p>Below is a simple approach to using this flag. Any time the window receives focus, simply set the IMMERSIVE_STICKY flag, along with the other flags discussed in Use IMMERSIVE. For example:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">@Override</span><br><span class="line">public void onWindowFocusChanged(boolean hasFocus) &#123;</span><br><span class="line">        super.onWindowFocusChanged(hasFocus);</span><br><span class="line">    if (hasFocus) &#123;</span><br><span class="line">        decorView.setSystemUiVisibility(</span><br><span class="line">                View.SYSTEM_UI_FLAG_LAYOUT_STABLE</span><br><span class="line">                | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION</span><br><span class="line">                | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN</span><br><span class="line">                | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION</span><br><span class="line">                | View.SYSTEM_UI_FLAG_FULLSCREEN</span><br><span class="line">                | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY);&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>Note: If you like the auto-hiding behavior of IMMERSIVE_STICKY but need to show your own UI controls as well, just use IMMERSIVE combined with <code>Handler.postDelayed()</code> or something similar to re-enter immersive mode after a few seconds.</p>
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/05/14/Mode/" rel="next" title="Using Immersive Full-Screen Mode">
+                <i class="fa fa-chevron-left"></i> Using Immersive Full-Screen Mode
+              </a>
+            
+          </div>
 
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
       
 
       
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -489,6 +393,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -508,8 +416,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.jpg"
@@ -572,6 +489,17 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-messagepack"><span class="nav-number">1.</span> <span class="nav-text">1 messagepack</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-messagepack数据类型"><span class="nav-number">1.1.</span> <span class="nav-text">1.1 messagepack数据类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-messagepack序列化和反序列化"><span class="nav-number">1.2.</span> <span class="nav-text">1.2 messagepack序列化和反序列化</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-protocol-buffers"><span class="nav-number">2.</span> <span class="nav-text">2 protocol buffers</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#scalar-value-types"><span class="nav-number">2.1.</span> <span class="nav-text">scalar value types</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#protocol-buffers序列化和反序列化"><span class="nav-number">2.2.</span> <span class="nav-text">protocol buffers序列化和反序列化</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-json-msgpack-protobuf-序列化和反序列化比较"><span class="nav-number">3.</span> <span class="nav-text">3. json, msgpack, protobuf 序列化和反序列化比较</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#以相同数据分别用这三种方式序列化和反序列化进行测试比较"><span class="nav-number">3.1.</span> <span class="nav-text">以相同数据分别用这三种方式序列化和反序列化进行测试比较</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#"><span class="nav-number">4.</span> <span class="nav-text"></span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-总结"><span class="nav-number">5.</span> <span class="nav-text">4. 总结</span></a></li></ol></div>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -675,6 +603,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
 
   
 
